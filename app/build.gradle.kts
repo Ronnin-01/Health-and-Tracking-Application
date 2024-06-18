@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
+    //id("dagger.hilt.android.plugin") version "2.40.5"
+    id("dagger.hilt.android.plugin")
 
 
 }
@@ -96,8 +98,8 @@ dependencies {
     implementation("com.google.android.gms:play-services-maps:17.0.0")
 
     // Dagger Core
-    implementation("com.google.dagger:dagger:2.28.1")
-    kapt("com.google.dagger:dagger-compiler:2.28.1")
+    implementation("com.google.dagger:dagger:2.51.1")
+    kapt("com.google.dagger:dagger-compiler:2.51.1")
 
     // Activity KTX for ViewModels
     implementation("androidx.activity:activity-ktx:1.9.0")
@@ -106,13 +108,14 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.28-alpha")
     kapt("com.google.dagger:hilt-android-compiler:2.28-alpha")
 
+
     implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha01")
     kapt("androidx.hilt:hilt-compiler:1.0.0-alpha01")
 
     // Dagger Android
-    api("com.google.dagger:dagger-android:2.28.1")
-    api("com.google.dagger:dagger-android-support:2.28.1")
-    kapt("com.google.dagger:dagger-android-processor:2.28.1")
+    api("com.google.dagger:dagger-android:2.51.1")
+    api("com.google.dagger:dagger-android-support:2.51.1")
+    kapt("com.google.dagger:dagger-android-processor:2.51.1")
 
     // Easy Permissions
     implementation("pub.devrel:easypermissions:3.0.0")

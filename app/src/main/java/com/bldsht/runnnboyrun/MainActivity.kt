@@ -1,20 +1,29 @@
 package com.bldsht.runnnboyrun
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.bldsht.runnnboyrun.DataClass.RunningDatabase
+import androidx.lifecycle.lifecycleScope
+import com.bldsht.runnnboyrun.DataClass.Run
+import com.bldsht.runnnboyrun.DataClass.RunDAO
+import dagger.android.AndroidInjection
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+    @Inject
+     lateinit var runDao: RunDAO
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val db = Room.databaseBuilder(
-//            applicationContext,
-//            RunningDatabase::class.java, "running_database"
-//        ).build()
+
+
+        Log.d("runDao","RunDao: ${runDao}")
+
+
     }
 }

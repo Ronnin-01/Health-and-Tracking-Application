@@ -22,17 +22,15 @@ buildscript {
         //noinspection UseTomlInstead
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.7")
         //noinspection UseTomlInstead
-        classpath("com.google.dagger:hilt-android-gradle-plugin:2.40.1")
+        classpath("com.google.dagger:hilt-android-gradle-plugin:2.40.5")
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
-
-allprojects {
-//    repositories {
-//        mavenCentral() // Replace jcenter() with mavenCentral()
-//        maven { url = URI("https://jitpack.io") }
-//    }
-
+//task clean(type: Delete) {
+//    delete rootProject.buildDir
+//}
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
 }
